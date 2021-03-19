@@ -21,6 +21,10 @@ environment:
   sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
+  
+  line_icons: ^2.0.0
+  splashscreen: ^1.2.0
+  curved_navigation_bar: ^0.3.2
   flutter:
     sdk: flutter
 
