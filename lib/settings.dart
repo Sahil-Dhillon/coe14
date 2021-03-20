@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+// import 'package:flutter_settings_screens/flutter_settings_screens.dart';
+import 'package:settings_ui/settings_ui.dart';
 
 class SettingsPage extends StatefulWidget {
   @override
@@ -6,6 +8,9 @@ class SettingsPage extends StatefulWidget {
 }
 
 class _SettingsPageState extends State<SettingsPage> {
+  bool _toggleAirplaneMode = false;
+  bool _toggleBluetooth = false;
+  bool _toggleWiFi = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -13,6 +18,47 @@ class _SettingsPageState extends State<SettingsPage> {
         title: Text("Settings"),
       ),
       drawer: NavDrawer(),
+      body: Center(
+          child: Column(
+        children: [
+          SwitchListTile(
+            title: Text('Airplane Mode'),
+            secondary: Icon(Icons.airplanemode_active),
+            onChanged: (value) {
+              setState(() {
+                _toggleAirplaneMode = value;
+              });
+            },
+            value: _toggleAirplaneMode,
+          ),
+          Divider(
+            thickness: 1.2,
+          ),
+          SwitchListTile(
+            title: Text('Wi-Fi'),
+            secondary: Icon(Icons.wifi),
+            onChanged: (value) {
+              setState(() {
+                _toggleWiFi = value;
+              });
+            },
+            value: _toggleWiFi,
+          ),
+          Divider(
+            thickness: 1.2,
+          ),
+          SwitchListTile(
+            title: Text('Bluetooth'),
+            secondary: Icon(Icons.bluetooth),
+            onChanged: (value) {
+              setState(() {
+                _toggleBluetooth = value;
+              });
+            },
+            value: _toggleBluetooth,
+          ),
+        ],
+      )),
     );
   }
 }

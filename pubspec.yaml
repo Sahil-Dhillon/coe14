@@ -25,6 +25,11 @@ dependencies:
   line_icons: ^2.0.0
   splashscreen: ^1.2.0
   curved_navigation_bar: ^0.3.2
+  # flutter_settings_screens: ^0.2.1+1
+  settings_ui: ^0.6.0
+  firebase_core: ^0.4.0+9
+  firebase_analytics: ^5.0.2
+  cloud_firestore: ^0.12.9+5
   flutter:
     sdk: flutter
 

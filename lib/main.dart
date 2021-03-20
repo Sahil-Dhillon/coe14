@@ -8,6 +8,7 @@ import 'package:splashscreen/splashscreen.dart';
 void main() {
   runApp(MaterialApp(
     title: "COE14",
+    debugShowCheckedModeBanner: false,
     // darkTheme: ThemeData.dark(),
     home: SplashScreenPage(),
   ));
